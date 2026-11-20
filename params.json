@@ -1,0 +1,65 @@
+{
+  "_readme": "Shared settings for every bottle. All lengths in mm. Keys starting with '_' are notes and are ignored. Each bottle's measurements live in bottles/<name>/bottle.json, which can also override any key here. Run: python generate.py [bottles/<name>]",
+
+  "boot": {
+    "_note": "A cup that the bottle's base pushes down into. The AirTag sits in a pocket in the floor, put in from inside the boot; with the bottle in, the bottle's bottom covers it. Printed in TPU 90A, floor on the bed, no supports.",
+    "WALL": 2.0,
+    "_WALL": "Side wall thickness",
+    "WALL_HEIGHT": 30.0,
+    "_WALL_HEIGHT": "How far up the bottle's side the boot reaches, measured from the bottle's bottom",
+    "FIT_SQUEEZE": 0.6,
+    "_FIT_SQUEEZE": "How much smaller the inside is than the bottle, on the diameter. The TPU stretches over the bottle and grips it. More = tighter",
+    "FLOOR_UNDER": 1.0,
+    "_FLOOR_UNDER": "Floor under the AirTag; the boot's thinnest point. Thinner = the AirTag is louder",
+    "BOTTOM_ROUND": 3.0,
+    "_BOTTOM_ROUND": "Rounded bottom outside edge",
+    "TOP_ROUND": 0.8,
+    "_TOP_ROUND": "Rounded top edge of the wall",
+    "DRAIN_HOLES": 6,
+    "_DRAIN_HOLES": "Holes through the floor near the wall to let water out from washing. 0 for none",
+    "DRAIN_DIAMETER": 3.0
+  },
+
+  "airtag": {
+    "_note": "Apple AirTag: 31.9 mm across, 8.0 mm thick (Apple's published size). It presses in under a small lip that holds it when the bottle is out.",
+    "AIRTAG_DIAMETER": 31.9,
+    "AIRTAG_THICKNESS": 8.0,
+    "AIRTAG_CLEARANCE": -0.6,
+    "_AIRTAG_CLEARANCE": "Pocket bigger than the AirTag, on the diameter. Below 0: smaller, so the TPU stretches round the AirTag and grips it (0.4 let it rattle and fall out, 2026-11-08)",
+    "AIRTAG_HEADROOM": 0.0,
+    "_AIRTAG_HEADROOM": "Gap above the AirTag, under the lip, with the spring bumps not squashed. 0: the bumps press it up against the lip. The bottle never presses on it",
+    "LIP": 1.6,
+    "_LIP": "How far the lip at the top of the pocket overhangs the AirTag; it must reach past the AirTag's rounded top edge to the flat (0.8 did not, and the AirTag fell out, 2026-11-08). 0 for no lip (the bottle alone holds the AirTag)",
+    "LIP_HEIGHT": 1.2,
+    "_LIP_HEIGHT": "Lip thickness. Its top is chamfered from the pocket's edge down to the lip, a lead-in for pressing the AirTag in",
+    "PUSH_HOLE_DIAMETER": 12.0,
+    "_PUSH_HOLE_DIAMETER": "Hole in the floor under the AirTag to push it out from below with a thumb. 0 for none",
+    "SOUND_HOLES": 8,
+    "_SOUND_HOLES": "Ring of holes in the floor under the AirTag so its speaker is heard. 0 for none",
+    "SOUND_HOLE_DIAMETER": 2.5,
+    "SPRING_BUMPS": 4,
+    "_SPRING_BUMPS": "Small bumps on the pocket floor, between the push hole and the sound holes; they squash and hold the AirTag up against the lip so it cannot rattle. 0 for none",
+    "SPRING_HEIGHT": 0.4,
+    "_SPRING_HEIGHT": "How far the bumps stand up, which is how much they squash with the AirTag in (less AIRTAG_HEADROOM)",
+    "SPRING_DIAMETER": 2.5
+  },
+
+  "texture": {
+    "_note": "Optional raised pattern round the outside of the wall; the inside, where the bottle goes, is untouched. Set TEXTURE in a bottle's profile.",
+    "TEXTURE": "none",
+    "_TEXTURE": "none; cabana (stripes, starfish, scallop shells, coral and bubbles, to go with Owala's Coral Cabana graphics); surf (wave lines, palm trees, surfboards and suns, to go with Owala's Vintage Surf graphics)",
+    "TEXTURE_RELIEF": 0.8,
+    "_TEXTURE_RELIEF": "How far the pattern stands proud of the wall",
+    "TEXTURE_PANEL": 28.0,
+    "_TEXTURE_PANEL": "Rough width of one motif's panel round the wall; the count is rounded to a multiple of 3"
+  },
+
+  "output": {
+    "_note": "Files are written into the profile's folder, named after it: <name>_boot.stl, <name>_preview.png.",
+    "PREVIEW": true,
+    "CHECK_FIT": true,
+    "_CHECK_FIT": "Check the AirTag in its pocket against the boot and the bottle (a few seconds)",
+    "TPU_DENSITY": 1.21,
+    "_TPU_DENSITY": "g/cm3, for the weight estimate (solid; the slicer's infill makes it lighter)"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "_readme": "Bambu Studio settings for the boot in TPU 90A, applied by make_3mf.py over a1_project_settings.config (the user's A1 project settings from the scope lock, 0.20mm Standard @BBL A1). Filament 1 becomes the system preset named in FILAMENT_PRESET, read from the Bambu Studio install, then 'filament' below on top. Keys starting with '_' are notes. Values are written as Bambu Studio stores them (strings; lists for per-extruder keys).",
+
+  "FILAMENT_PRESET": "Bambu TPU 90A @BBL A1",
+
+  "print": {
+    "_note": "Process settings. TPU 90A is fed from the external spool and limited to 2.8 mm3/s by its preset (about 33 mm/s at 0.2 x 0.42), so the speeds sit just under that and the slicer's limit rarely kicks in; slow, even extrusion is what keeps soft TPU from buckling in the extruder.",
+
+    "wall_generator": "arachne",
+    "wall_loops": "5",
+    "_wall_loops": "5 x 0.42 fills the 2 mm side wall with perimeters only: no infill in the part that stretches over the bottle",
+    "detect_thin_wall": "1",
+    "top_shell_layers": "4",
+    "top_shell_thickness": "0.8",
+    "bottom_shell_layers": "4",
+    "bottom_shell_thickness": "0",
+    "sparse_infill_density": "100%",
+    "_sparse_infill_density": "Solid floor (2026-11-06): with clear TPU, sparse infill shows through the wall as a cross-hatch. Back to 20% gyroid for a lighter, quicker print",
+    "sparse_infill_pattern": "zig-zag",
+    "_sparse_infill_pattern": "Bambu Studio refuses gyroid at 100%. Gyroid at 20%: no crossing lines, springy",
+
+    "initial_layer_speed": ["15"],
+    "initial_layer_infill_speed": ["20"],
+    "outer_wall_speed": ["25"],
+    "inner_wall_speed": ["30"],
+    "small_perimeter_speed": ["50%"],
+    "sparse_infill_speed": ["35"],
+    "internal_solid_infill_speed": ["30"],
+    "top_surface_speed": ["25"],
+    "gap_infill_speed": ["25"],
+    "bridge_speed": ["20"],
+    "travel_speed": ["300"],
+
+    "default_acceleration": ["2000"],
+    "outer_wall_acceleration": ["1000"],
+    "top_surface_acceleration": ["1000"],
+    "initial_layer_acceleration": ["300"],
+
+    "reduce_crossing_wall": "1",
+    "_reduce_crossing_wall": "Travel round inside the walls instead of across them: TPU strings",
+    "seam_position": "back",
+    "enable_support": "0",
+    "brim_type": "no_brim",
+    "enable_prime_tower": "0",
+    "print_sequence": "by layer"
+  },
+
+  "filament": {
+    "_note": "Filament 1, on top of the TPU 90A preset.",
+    "nozzle_temperature": "220",
+    "_nozzle_temperature": "Preset 225; 5 degrees cooler oozes less. First layer stays at the preset's 225 to stick",
+    "filament_retraction_length": "0.8",
+    "_filament_retraction_length": "Preset 0.4 strung badly on the first print (2026-11-06, timelapse on, spool maybe damp)",
+    "filament_retraction_speed": "20",
+    "_filament_retraction_speed": "Slow retraction; fast or long ones buckle soft TPU",
+    "filament_deretraction_speed": "20",
+    "filament_z_hop": "0",
+    "_filament_z_hop": "No Z hop: less oozing on travel",
+    "filament_wipe": "1",
+    "filament_wipe_distance": "1.5"
+  }
+}

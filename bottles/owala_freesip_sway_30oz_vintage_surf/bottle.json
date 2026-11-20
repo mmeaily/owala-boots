@@ -1,0 +1,17 @@
+{
+  "_readme": "Bottle profile: Owala FreeSip Sway, 30 oz, Vintage Surf (surf collection; retro waves, palm trees and surfboards). Same bottle as owala_freesip_sway_30oz, which fits (2026-11-06); this one adds the surf texture. All lengths in mm.",
+  "bottle": {
+    "_note": "ESTIMATES, not measured. Owala publishes no base size; Pack Hacker lists the 30 oz Sway as 26.9 x 7 cm (10.59 x 2.77 in), taken here as the base. The body widens towards the lid. Measure with calipers before the full print.",
+    "BASE_DIAMETER": 70.0,
+    "_BASE_DIAMETER": "Side of the bottle just above the rounded bottom edge",
+    "UPPER_DIAMETER": 71.5,
+    "_UPPER_DIAMETER": "Side of the bottle at UPPER_HEIGHT above the table. Same as BASE_DIAMETER for a straight bottle",
+    "UPPER_HEIGHT": 40.0,
+    "_UPPER_HEIGHT": "Where UPPER_DIAMETER is measured, from the table. Above WALL_HEIGHT",
+    "CORNER_RADIUS": 5.0,
+    "_CORNER_RADIUS": "Rounded edge between the bottom and the side"
+  },
+  "texture": {
+    "TEXTURE": "surf"
+  }
+}

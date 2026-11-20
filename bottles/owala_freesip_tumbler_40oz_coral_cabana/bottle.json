@@ -1,0 +1,19 @@
+{
+  "_readme": "Bottle profile: Owala FreeSip Tumbler, 40 oz, Coral Cabana (special edition; cream with navy coral, starfish and shells over stripes). All lengths in mm. Any key from params.json can be added here to override it for this bottle.",
+
+  "bottle": {
+    "_note": "ESTIMATES, not measured. Owala gives 11.64 in tall x 3.60 in (91 mm) across at the widest; the base narrows to fit cup holders, about 2.75-2.85 in (70-72 mm) by Owala's Q&A answers. Measure with calipers before the full print; check for a step or shoulder in the bottom 40 mm, which this straight taper does not model.",
+    "BASE_DIAMETER": 72.0,
+    "_BASE_DIAMETER": "Side of the bottle just above the rounded bottom edge",
+    "UPPER_DIAMETER": 75.0,
+    "_UPPER_DIAMETER": "Side of the bottle at UPPER_HEIGHT above the table",
+    "UPPER_HEIGHT": 40.0,
+    "_UPPER_HEIGHT": "Where UPPER_DIAMETER is measured, from the table. Above WALL_HEIGHT",
+    "CORNER_RADIUS": 5.0,
+    "_CORNER_RADIUS": "Rounded edge between the bottom and the side"
+  },
+
+  "texture": {
+    "TEXTURE": "cabana"
+  }
+}

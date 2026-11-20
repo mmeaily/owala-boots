@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+*.pyc
+debug.log
+CLAUDE.md
+# Full-resolution boot STLs (80-100 MB) are attached to GitHub Releases
+bottles/*/*_boot.stl
